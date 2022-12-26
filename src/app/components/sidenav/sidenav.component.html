@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h4>Logo</h4>
+      <button mat-button class="px-[16px]" (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
+      <button mat-button > <mat-icon>home</mat-icon> Home</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="side"
+    class="text-red-800 font-semibold">
+      <mat-list>
+        <mat-list-item>
+          <a routerLink="/sidenav" class="cursor-pointer text-blue-700"
+          >Sidenav Component</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+      
+    </mat-sidenav-content>
+  </mat-sidenav-container>
